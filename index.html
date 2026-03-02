@@ -3,45 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Sản phẩm đèn NLMT | HS G-ENERGY</title>
+
     <style>
+        /* ===== RESET ===== */
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             background: #f2f6fa;
         }
 
-        /* HEADER */
-        header {
-            background: linear-gradient(90deg, #0a74c9, #2fa4ff);
-            color: white;
-            padding: 20px;
+        /* ===== HEADER ===== */
+        .site-header {
+            background: #f4f7fb;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .header-inner {
             max-width: 1100px;
             margin: auto;
+            padding: 16px 20px;
         }
 
-        .logo-box {
-            width: 120px;
-            height: 60px;
-            border: 2px dashed rgba(255,255,255,0.8);
+        .brand {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-weight: bold;
+            gap: 16px;
+        }
+
+        .brand-logo {
+            height: 64px;
+            background: white;
+            padding: 6px 10px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+        }
+
+        .brand-text h1 {
+            margin: 0;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #0a5ea8;
+        }
+
+        .brand-text p {
+            margin: 4px 0 0;
             font-size: 14px;
-            color: white;
+            color: #555;
         }
 
-        .header-title {
-            text-align: center;
-            margin-top: 15px;
-        }
-
+        /* ===== NAV ===== */
         nav {
             background: #075fa8;
             text-align: center;
@@ -50,15 +61,16 @@
 
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 18px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
+        /* ===== CONTENT ===== */
         .container {
             max-width: 1100px;
             margin: auto;
@@ -66,26 +78,29 @@
         }
 
         .product {
-            background: white;
+            background: #ffffff;
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 25px;
             display: flex;
-            gap: 20px;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            gap: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .image-box {
             width: 250px;
             height: 180px;
-            border: 2px dashed #aaa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-weight: bold;
-            font-size: 18px;
+            background: #f5f7fa;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .info h3 {
@@ -99,6 +114,7 @@
             font-weight: bold;
         }
 
+        /* ===== FOOTER ===== */
         footer {
             background: #075fa8;
             color: white;
@@ -106,19 +122,37 @@
             padding: 15px;
             margin-top: 30px;
         }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .image-box {
+                width: 100%;
+                height: 220px;
+            }
+
+            .brand {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="header-top">
-        <div class="logo-box"><div LGHS.jpg=""></div></div>
-        <div class="logo-box">[Ảnh logo nhà đầu tư]</div>
-    </div>
-
-    <div class="header-title">
-        <h1>HS G-ENERGY</h1>
-        <p>Danh sách sản phẩm đèn năng lượng mặt trời</p>
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <img src="logo-hs-2.jpg" alt="HS G-ENERGY" class="brand-logo">
+            <div class="brand-text">
+                <h1>HS G-ENERGY</h1>
+                <p>Danh sách sản phẩm đèn năng lượng mặt trời</p>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -131,49 +165,65 @@
 <div class="container">
 
     <div class="product">
-        <div class="image-box">[Ảnh JD 500W]</div>
+        <div class="image-box">
+            <img src="HS 500W.jpg">
+        </div>
         <div class="info">
-            <h3>Đèn Năng Lượng Mặt Trời JD 500W</h3>
+            <h3>Đèn NLMT HS 500W</h3>
             <p>✔ Công suất lớn – ánh sáng mạnh</p>
-            <p>✔ Pin NLMT hiệu suất cao</p>
-            <p>✔ Chống nước IP66</p>
-            <p class="price">Giá: 3.500.000đ</p>
+            <p>✔ Pin hiệu suất cao</p>
+            <p>✔ IP66 chống nước</p>
+            <p class="price">3.500.000đ</p>
         </div>
     </div>
 
     <div class="product">
-        <div class="image-box">[Ảnh JD 300W]</div>
+        <div class="image-box">
+            <img src="HS 300W.jpg">
+        </div>
         <div class="info">
-            <h3>Đèn Năng Lượng Mặt Trời JD 300W</h3>
+            <h3>Đèn NLMT HS 300W</h3>
             <p>✔ Chiếu sáng ổn định</p>
             <p>✔ Tự động bật/tắt</p>
-            <p>✔ Phù hợp sân – kho</p>
-            <p class="price">Giá: 2.500.000đ</p>
+            <p class="price">2.500.000đ</p>
         </div>
     </div>
-
-    <div class="product">
-        <div class="image-box">[Ảnh JD 200W]</div>
-        <div class="info">
-            <h3>Đèn Năng Lượng Mặt Trời JD 200W</h3>
-            <p>✔ Thiết kế gọn nhẹ</p>
-            <p>✔ Tiết kiệm điện 100%</p>
-            <p>✔ Tuổi thọ cao</p>
-            <p class="price">Giá: 1.850.000đ</p>
-        </div>
+<div class="product">
+    <div class="image-box">
+        <img src="HS 200W.jpg" alt="Đèn NLMT HS 200W">
     </div>
-
-    <div class="product">
-        <div class="image-box">[Ảnh JD 100W]</div>
-        <div class="info">
-            <h3>Đèn Năng Lượng Mặt Trời JD 100W</h3>
-            <p>✔ Phù hợp sân vườn</p>
-            <p>✔ Dễ lắp đặt</p>
-            <p>✔ Không cần dây điện</p>
-            <p class="price">Giá: 1.250.000đ</p>
-        </div>
+    <div class="info">
+        <h3>Đèn NLMT HS 200W</h3>
+        <p>✔ Thiết kế gọn nhẹ</p>
+        <p>✔ Tiết kiệm điện 100%</p>
+        <p>✔ Tuổi thọ cao</p>
+        <p class="price">1.850.000đ</p>
     </div>
-
+</div>
+<div class="product">
+    <div class="image-box">
+        <img src="HS 100W.jpg" alt="Đèn NLMT HS 100W">
+    </div>
+    <div class="info">
+        <h3>Đèn NLMT HS 100W</h3>
+        <p>✔ Phù hợp sân vườn</p>
+        <p>✔ Dễ lắp đặt</p>
+        <p>✔ Không cần dây điện</p>
+        <p class="price">1.250.000đ</p>
+    </div>
+</div>
+<div class="product">
+    <div class="image-box">
+        <img src="HP-P50.jpg" alt="Đèn NLMT HP-P50">
+    </div>
+    <div class="info">
+        <h3>Đèn NLMT HP-P50</h3>
+        <p>✔ Phù hợp sân lớn</p>
+        <p>✔ Dễ lắp đặt</p>
+        <p>✔ Diện tích sáng rộng</p>
+        <p class="price">4.850.000đ</p>
+    </div>
+</div>
 </div>
 
 <footer>
